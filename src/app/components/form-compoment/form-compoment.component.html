@@ -1,0 +1,20 @@
+<div class="mb-3">
+    <form (ngSubmit)="submit()" [formGroup]="formColchetes" #formDir="ngForm">
+        <div class="mb-3">
+            <label for="" class="form-label">Colchetes</label>
+            <input type="text" formControlName="colchetes" class="form-control" placeholder="Conlchetes" aria-describedby="helpId" required>
+            <div *ngIf="colchetes.invalid && formDir.submitted">
+                <span class="badge text-bg-danger">Campo Obrigatório</span>
+            </div>
+            <small id="helpId" class="text-muted">Parametros aceitos: {{parametros}} </small>
+        </div>
+        <input name="" id="" class="btn btn-primary mb-3" type="submit" value="Verificar">
+
+        <div class="alert alert-success" role="alert" *ngIf="showOk === 'ok'">
+            {{mensagem}}
+        </div>
+        <div class="alert alert-danger" *ngIf="showOk === 'nok'">
+            {{mensagem}}
+        </div>
+    </form>
+</div>
