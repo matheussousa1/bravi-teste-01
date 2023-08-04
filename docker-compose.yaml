@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  bravi-tarefa-01:
+    image: matheussousa32/bravi-tarefa-01:v1
+    container_name: tarefa-01
+    ports:
+      - "8099:80"
